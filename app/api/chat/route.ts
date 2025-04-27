@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createOpenAI } from '@ai-sdk/openai';
 import { streamText, CoreMessage, StreamTextResult } from 'ai';
 import { db } from '@/lib/prisma';
-// Importar todo el módulo de Prisma Client
-import * as PrismaClientAll from '@prisma/client';
+// Importar el enum directamente desde @prisma/client (forma estándar)
+import { MessageRole } from '@prisma/client';
 import { auth } from '@/auth';
 
 // Verificar que la API key existe, agregada en .env.local y en vercel project
@@ -55,8 +55,8 @@ export async function POST(req: NextRequest) {
         await db.chatMessage.create({
           data: {
             userId: userId,
-            // Usar el enum a través del import completo
-            role: PrismaClientAll.MessageRole.user,
+            // Usar el enum importado directamente
+            role: MessageRole.user,
             content: typeof lastUserMessage.content === 'string' ? lastUserMessage.content : JSON.stringify(lastUserMessage.content),
           },
         });
@@ -73,8 +73,8 @@ export async function POST(req: NextRequest) {
         await db.chatMessage.create({
           data: {
             userId: userId,
-            // Usar el enum a través del import completo
-            role: PrismaClientAll.MessageRole.bot,
+            // Usar el enum importado directamente
+            role: MessageRole.bot,
             content: faqs[lastMessageContent]
           }
         });
@@ -101,8 +101,8 @@ export async function POST(req: NextRequest) {
           await db.chatMessage.create({
             data: {
               userId: userId,
-              // Usar el enum a través del import completo
-              role: PrismaClientAll.MessageRole.bot,
+              // Usar el enum importado directamente
+              role: MessageRole.bot,
               content: text,
             },
           });
