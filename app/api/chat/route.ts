@@ -118,7 +118,6 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     // --- Error Handling (Keep and potentially improve) ---
     console.error('Chat API Error:', error);
-    // Consider more specific error handling if needed
     // if (error instanceof OpenAI.APIError) { ... }
     return new Response('Internal Server Error', { status: 500 });
   }
