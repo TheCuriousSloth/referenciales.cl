@@ -81,12 +81,12 @@ model User {
   image         String?
   createdAt     DateTime        @default(now())
   updatedAt     DateTime        @updatedAt
-  role          Role            @default(user)  // Cambiamos String por Role
+  role          Role            @default(user)  
   accounts      Account[]
   sessions      Session[]
   referenciales referenciales[]
   auditLogs     AuditLog[] 
-  chatMessages  ChatMessage[] // Relación inversa con ChatMessage
+  chatMessages  ChatMessage[] 
 }
 
 model Account {
