@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+# pnpm-lock.yaml  <-- ESTA LÍNEA DEBERÍA ESTAR AUSENTE O COMENTADA
 
 # testing
 /coverage
@@ -23,29 +24,31 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json 
+yarn.lock         
 
 # local env files
-.env.development
-.env.production
-.env*.local
-.env
+.env.development  # Ok
+.env.production   # Ok
+.env*.local       # Ok, cubre .env.local
+.env              # Ok, importante ignorar .env general también
 
 # vercel
-.vercel
+.vercel           # Ok
 
 # typescript
-*.tsbuildinfo
-next-env.d.ts
+*.tsbuildinfo     # Ok
+next-env.d.ts     # Ok
 
 # Scripts locales
-*.sh
-migrate.sql
-start-db.sh
+# *.sh              <-- Ojo: Esto ignora TODOS los .sh. Si quieres rastrear alguno, quítalo.
+# migrate.sql       <-- Ojo: Si quieres rastrear este archivo, quítalo.
+# start-db.sh       <-- Ojo: Si quieres rastrear este archivo, quítalo.
 
 # Ignore scripts folder
-/scripts/
-.codegpt
+# /scripts/         <-- Ojo: Esto ignora TODA la carpeta scripts. Si quieres rastrear scripts específicos dentro, esta línea es demasiado general.
+.codegpt          # Ok
 
 # draw.io files
-*.drawio
-*.drawio.bkp
+*.drawio          # Ok
+*.drawio.bkp      # Ok

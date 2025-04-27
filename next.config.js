@@ -1,106 +1,63 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-      },
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-      },
-      {
-        protocol: 'https',
-        hostname: 'referenciales.cl',
-      }
-    ],
-  },
-  reactStrictMode: true,
-  env: {
-    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
-    GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-  },
-  experimental: {
-    optimizeCss: true,
-    // Previene errores de hidratación
-    scrollRestoration: false, // Cambia a false para probar
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+  // Aquí pueden ir otras configuraciones que ya tengas (reactStrictMode, images, etc.)
+  // ...
+
+  // Configuración de Headers para añadir la CSP
   async headers() {
-    const isDev = process.env.NODE_ENV === 'development';
-    
-    const baseDomains = [
-      "'self'",
-      "https://*.vercel.com",
-      "https://*.vercel-scripts.com",
-      "https://va.vercel-scripts.com",
-      "https://vitals.vercel-insights.com",
-      "https://*.openstreetmap.org",
-      "https://accounts.google.com"
+    // Define las directivas de la Política de Seguridad de Contenido (CSP)
+    const cspHeader = `
+      default-src 'self';
+      script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://vercel.live/ https://va.vercel-scripts.com;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' blob: data: https://*.googleusercontent.com https://*.tile.openstreetmap.org;
+      font-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      frame-ancestors 'none';
+      connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://vercel.live/ https://vitals.vercel-insights.com;
+      block-all-mixed-content;
+      upgrade-insecure-requests;
+    `;
+    /*
+      Explicación de las directivas corregidas/añadidas:
+      - img-src:
+        - 'self': Permite imágenes del mismo origen.
+        - blob:: Permite imágenes creadas como Blobs.
+        - data:: Permite imágenes como Data URIs.
+        - https://*.googleusercontent.com: Permite avatares de usuarios de Google.
+        - https://*.tile.openstreetmap.org: Añadido para permitir las teselas de OpenStreetMap (usadas comúnmente por Leaflet).
+      - ... (otras directivas explicadas anteriormente) ...
+    */
+
+    return [
+      {
+        // Aplica estos headers a todas las rutas de la aplicación
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            // Limpia espacios extra y saltos de línea de la cadena CSP
+            value: cspHeader.replace(/\s{2,}/g, ' ').trim(),
+          },
+          // Otros Headers de Seguridad (Buenas prácticas)
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+        ],
+      },
     ];
-
-    const cspDirectives = {
-      'default-src': ["'self'"],
-      'script-src': [
-        "'self'",
-        "'unsafe-inline'",
-        "'unsafe-eval'",
-        ...baseDomains
-      ],
-      'style-src': ["'self'", "'unsafe-inline'"],
-      'img-src': [
-        "'self'",
-        "data:",
-        "blob:",
-        "https://*.googleusercontent.com",
-        "https://authjs.dev",
-        "https://*.openstreetmap.org",
-        "https://*.tile.openstreetmap.org",
-        ...baseDomains
-      ],
-      'font-src': ["'self'", "data:"],
-      'connect-src': [
-        "'self'",
-        "https://*.tile.openstreetmap.org",
-        "https://*.openstreetmap.org",
-        ...baseDomains,
-        ...(isDev ? ["*"] : [])
-      ],
-      'frame-src': ["'self'", "https://accounts.google.com"]
-    };
-
-    const cspString = Object.entries(cspDirectives)
-      .map(([key, values]) => `${key} ${Array.from(new Set(values)).join(' ')}`)
-      .join('; ');
-
-      return [
-        {
-          source: '/:path*',
-          headers: [
-            { key: 'Content-Security-Policy', value: cspString },
-            { key: 'X-Content-Type-Options', value: 'nosniff' },
-            { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-            { key: 'Vary', value: 'Accept' }, // Mejora compatibilidad con respuestas dinámicas
-          ],
-        },
-        {
-          source: '/dashboard/referenciales',
-          headers: [
-            { key: 'Cache-Control', value: 'no-store, no-cache, must-revalidate' }, // Evita caché en la paginación
-          ],
-        },
-        {
-          source: '/_next/static/:path*', // Recursos estáticos
-          headers: [
-            { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }, // Cachea recursos estáticos por un año
-          ],
-        },
-      ];
-    },
-  };
+  },
+};
 
 module.exports = nextConfig;

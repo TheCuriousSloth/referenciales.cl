@@ -1,0 +1,292 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+  <diagram id="codeviz-diagram" name="System Diagram">
+    <mxGraphModel dx="1594" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="subGraph7" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="1" vertex="1">
+          <mxGeometry x="576.5" y="2347" width="380" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="GoogleAuth" value="Google OAuth&lt;br&gt;OAuth 2.0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9933;" parent="subGraph7" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PostgresDB" value="PostgreSQL Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9933;" parent="subGraph7" vertex="1">
+          <mxGeometry x="180" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph7_label" value="External Services" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="1" vertex="1">
+          <mxGeometry x="584.5" y="2355" width="304" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph6" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="1" vertex="1">
+          <mxGeometry x="547.5" y="1157" width="580" height="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph5" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph6" vertex="1">
+          <mxGeometry x="310" y="765" width="240" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="PrismaORM" value="Prisma ORM&lt;br&gt;Prisma" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph5" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DatabaseQueries" value="Database Queries&lt;br&gt;Prisma Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph5" vertex="1">
+          <mxGeometry x="40" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph5_label" value="Data Access" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph6" vertex="1">
+          <mxGeometry x="318" y="773" width="164" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph4" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph6" vertex="1">
+          <mxGeometry x="160" y="425" width="410" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthService" value="Auth Service&lt;br&gt;NextAuth.js" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9933;" parent="subGraph4" vertex="1">
+          <mxGeometry x="70" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ReferencialService" value="Referencial Service&lt;br&gt;Node.js" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph4" vertex="1">
+          <mxGeometry x="210" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EmailService" value="Email Service&lt;br&gt;Node.js" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph4" vertex="1">
+          <mxGeometry x="40" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph4_label" value="Core Services" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph6" vertex="1">
+          <mxGeometry x="168" y="433" width="334" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph3" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph6" vertex="1">
+          <mxGeometry x="50" y="195" width="520" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthAPI" value="Auth API&lt;br&gt;NextAuth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph3" vertex="1">
+          <mxGeometry x="180" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ReferencialAPI" value="Referencial API&lt;br&gt;Next.js API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph3" vertex="1">
+          <mxGeometry x="320" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GeocodingAPI" value="Geocoding API&lt;br&gt;Next.js API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph3" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph3_label" value="API Components" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph6" vertex="1">
+          <mxGeometry x="58" y="203" width="444" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="APIRouter" value="API Router&lt;br&gt;Next.js API Routes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph6" vertex="1">
+          <mxGeometry x="220" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph6_label" value="Backend Container" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="1" vertex="1">
+          <mxGeometry x="555.5" y="1165" width="504" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph2" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="1" vertex="1">
+          <mxGeometry x="32" y="187" width="720" height="885" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph1" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph2" vertex="1">
+          <mxGeometry x="330" y="545" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="SessionProvider" value="Session Provider&lt;br&gt;NextAuth.js" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph1" vertex="1">
+          <mxGeometry x="180" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthHooks" value="Auth Hooks&lt;br&gt;React Hooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph1" vertex="1">
+          <mxGeometry x="160" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MapService" value="Map Service&lt;br&gt;JavaScript" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph1" vertex="1">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph1_label" value="Client-Side Services" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph2" vertex="1">
+          <mxGeometry x="338" y="553" width="304" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph0" value="" style="html=1;whiteSpace=wrap;container=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fillOpacity=20;strokeWidth=2;containerType=none;recursiveResize=0;movable=1;resizable=1;autosize=0;dropTarget=0" parent="subGraph2" vertex="1">
+          <mxGeometry x="50" y="205" width="520" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthPages" value="Auth Pages&lt;br&gt;Next.js Pages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="210" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DashboardUI" value="Dashboard UI&lt;br&gt;React Components" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="70" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MapComponent" value="Map Component&lt;br&gt;React" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="320" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Forms" value="Forms&lt;br&gt;React" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="40" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UIComponents" value="UI Components&lt;br&gt;React" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph0" vertex="1">
+          <mxGeometry x="180" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph0_label" value="Frontend Components" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="subGraph2" vertex="1">
+          <mxGeometry x="109" y="213" width="444" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="NextApp" value="Next.js App&lt;br&gt;Next.js 14" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="subGraph2" vertex="1">
+          <mxGeometry x="146" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subGraph2_label" value="Frontend Container" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;labelBackgroundColor=white;spacing=5" parent="1" vertex="1">
+          <mxGeometry x="40" y="195" width="644" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="User" value="User" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5" parent="1" vertex="1">
+          <mxGeometry x="158" y="12" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_User_NextApp_0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="User" target="NextApp" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_User_NextApp_0_label" value="Accesses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_User_NextApp_0" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_NextApp_AuthPages_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="NextApp" target="AuthPages" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_NextApp_AuthPages_1_label" value="Routes to" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_NextApp_AuthPages_1" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_NextApp_DashboardUI_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="NextApp" target="DashboardUI" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DashboardUI_UIComponents_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="DashboardUI" target="UIComponents" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DashboardUI_UIComponents_3_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_DashboardUI_UIComponents_3" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_DashboardUI_MapComponent_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="DashboardUI" target="MapComponent" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DashboardUI_MapComponent_4_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_DashboardUI_MapComponent_4" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="12" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_DashboardUI_Forms_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="DashboardUI" target="Forms" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DashboardUI_Forms_5_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_DashboardUI_Forms_5" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_NextApp_SessionProvider_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="NextApp" target="SessionProvider" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_NextApp_SessionProvider_6_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_NextApp_SessionProvider_6" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_SessionProvider_AuthHooks_7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="SessionProvider" target="AuthHooks" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_SessionProvider_AuthHooks_7_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_SessionProvider_AuthHooks_7" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_MapComponent_MapService_8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="MapComponent" target="MapService" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_MapComponent_MapService_8_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_MapComponent_MapService_8" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="-32" y="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_NextApp_APIRouter_9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="NextApp" target="APIRouter" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_NextApp_APIRouter_9_label" value="API Calls" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_NextApp_APIRouter_9" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_APIRouter_AuthAPI_10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="APIRouter" target="AuthAPI" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_APIRouter_AuthAPI_10_label" value="Routes Auth" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_APIRouter_AuthAPI_10" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_APIRouter_ReferencialAPI_11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="APIRouter" target="ReferencialAPI" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_APIRouter_ReferencialAPI_11_label" value="Routes Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_APIRouter_ReferencialAPI_11" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_APIRouter_GeocodingAPI_12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="APIRouter" target="GeocodingAPI" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_APIRouter_GeocodingAPI_12_label" value="Routes Geocoding" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_APIRouter_GeocodingAPI_12" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_AuthAPI_AuthService_13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="AuthAPI" target="AuthService" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_AuthAPI_AuthService_13_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_AuthAPI_AuthService_13" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_ReferencialAPI_ReferencialService_14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="ReferencialAPI" target="ReferencialService" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_ReferencialAPI_ReferencialService_14_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_ReferencialAPI_ReferencialService_14" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_AuthService_EmailService_15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="AuthService" target="EmailService" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_AuthService_EmailService_15_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_AuthService_EmailService_15" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_ReferencialService_PrismaORM_16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="ReferencialService" target="PrismaORM" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_ReferencialService_PrismaORM_16_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_ReferencialService_PrismaORM_16" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_AuthService_PrismaORM_17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="AuthService" target="PrismaORM" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_AuthService_PrismaORM_17_label" value="Uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_AuthService_PrismaORM_17" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_PrismaORM_DatabaseQueries_18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="PrismaORM" target="DatabaseQueries" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_PrismaORM_DatabaseQueries_18_label" value="Executes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_PrismaORM_DatabaseQueries_18" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_DatabaseQueries_PostgresDB_19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="DatabaseQueries" target="PostgresDB" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_DatabaseQueries_PostgresDB_19_label" value="Queries" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_DatabaseQueries_PostgresDB_19" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_AuthService_GoogleAuth_20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="AuthService" target="GoogleAuth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_AuthService_GoogleAuth_20_label" value="Authenticates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_AuthService_GoogleAuth_20" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-L_SessionProvider_GoogleAuth_21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#808080;strokeWidth=2;jumpStyle=arc;jumpSize=10;spacing=15;labelBackgroundColor=white;labelBorderColor=none" parent="1" source="SessionProvider" target="GoogleAuth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-L_SessionProvider_GoogleAuth_21_label" value="Validates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="edge-L_SessionProvider_GoogleAuth_21" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
