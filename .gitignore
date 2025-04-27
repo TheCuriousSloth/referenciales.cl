@@ -1,51 +1,77 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ~/.gitignore
 
-# dependencies
+# === Dependencias ===
+# Ignora el directorio principal de módulos
 /node_modules
+
+# Ignora archivos lock de otros gestores (npm, Yarn Classic, Yarn PnP)
+# Ya que usaremos pnpm (pnpm-lock.yaml será rastreado)
+package-lock.json
+yarn.lock
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# === Logs ===
+# Ignora logs de diferentes gestores y herramientas
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# local env files
-.env.development
-.env.production
-.env*.local
+# === Entorno Local ===
+# Ignora archivos de variables de entorno locales.
+# El archivo .env.example sí debería estar en el repositorio.
 .env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# vercel
+# === Archivos de Sistema Operativo ===
+# Ignora archivos específicos de macOS, Windows y Linux/editors
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.swp
+*~
+
+# === Build Output y Cache ===
+# Ignora directorios de build y cache de Next.js y otros
+/.next/
+/out/
+/build/
 .vercel
-
-# typescript
 *.tsbuildinfo
+
+# === Testing ===
+/coverage
+/.nyc_output
+
+# === TypeScript ===
+# next-env.d.ts es generado automáticamente por Next.js
 next-env.d.ts
 
-# Scripts locales
-*.sh
-migrate.sql
-start-db.sh
+# === Varios ===
+*.pem # Certificados privados
+.codegpt # Archivos de configuración específicos de herramientas
 
-# Ignore scripts folder
-/scripts/
-.codegpt
-
-# draw.io files
+# === Archivos de Diseño/Diagramas ===
 *.drawio
 *.drawio.bkp
+
+# === Scripts Locales ===
+# Considera si realmente quieres ignorar *todos* los scripts.
+# Si algunos scripts son parte del proyecto, no los ignores aquí.
+# *.sh
+# migrate.sql
+# start-db.sh
+# /scripts/ # Si la carpeta contiene solo scripts locales/temporales
+
+# === Archivos específicos de IDEs (Opcional, a menudo mejor en .gitignore global) ===
+# .vscode/
+# .idea/
+
