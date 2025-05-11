@@ -12,8 +12,16 @@ export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(...inputs));
 }
 
-export const formatCurrency = (amount: number) => {
-  return (amount / 100).toLocaleString('en-US', {
+export const formatCurrency = (amount: number | bigint | null) => {
+  // Si es null o undefined, devolver un valor por defecto
+  if (amount === null || amount === undefined) {
+    return '$0.00';
+  }
+  
+  // Convertir a number si es bigint
+  const numericAmount = typeof amount === 'bigint' ? Number(amount) : amount;
+  
+  return (numericAmount / 100).toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',
   });
