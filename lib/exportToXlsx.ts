@@ -1,8 +1,35 @@
 // lib/exportToXlsx.ts
 import ExcelJS from 'exceljs';
-import { referenciales } from '@prisma/client';
 
-export const exportReferencialesToXlsx = async (referenciales: referenciales[], headers: { key: keyof referenciales, label: string }[]) => {
+// Definimos una interfaz para los datos exportables
+interface ExportableReferencial {
+  id: string;
+  lat: number;
+  lng: number;
+  fojas: string;
+  numero: number;
+  anio: number;
+  cbr: string;
+  comprador: string;
+  vendedor: string;
+  predio: string;
+  comuna: string;
+  rol: string;
+  fechaescritura: Date;
+  superficie: number;
+  monto: number | bigint | null;
+  observaciones: string | null;
+  userId: string;
+  conservadorId: string;
+  createdAt: Date;
+  updatedAt: Date;
+  [key: string]: any; // Para permitir propiedades adicionales como conservadorNombre
+}
+
+export const exportReferencialesToXlsx = async (
+  referenciales: ExportableReferencial[], 
+  headers: { key: string, label: string }[]
+) => {
   const workbook = new ExcelJS.Workbook();
   const worksheet = workbook.addWorksheet('Referenciales');
 
